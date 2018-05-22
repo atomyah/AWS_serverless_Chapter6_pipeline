@@ -1,0 +1,25 @@
+{
+    "timeoutInMinutes": 60,
+    "name": "chapter6-serverless-pipeline",
+    "serviceRole": "arn:aws:iam::567403292509:role/chapter6-codebuild-role",
+    "tags": [],
+    "artifacts": {
+        "packaging": "NONE",
+        "type": "CODEPIPELINE",
+        "name": "chapter6-serverless-pipeline"
+    },
+    "cache": {
+        "type": "NO_CACHE"
+    },
+    "environment": {
+        "computeType": "BUILD_GENERAL1_SMALL",
+        "privilegedMode": false,
+        "image": "aws/codebuild/python:3.5.2",
+        "type": "LINUX_CONTAINER",
+        "environmentVariables": []
+    },
+    "source": {
+        "insecureSsl": false,
+        "type": "CODEPIPELINE"
+    }
+}
