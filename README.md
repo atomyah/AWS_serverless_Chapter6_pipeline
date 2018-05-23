@@ -45,3 +45,6 @@ DOWNLOAD_SOURCE	Failed
 
 >>> S3へのcodebuildIAMロールのアクセス権をフルアクセスに変更
 
+結果：INSTALLステップで失敗
+[Container] 2018/05/23 06:13:54 Phase complete: INSTALL Success: false
+[Container] 2018/05/23 06:13:54 Phase context status code: COMMAND_EXECUTION_ERROR Message: Error while executing command: aws cloudformation package --template-file sample-sam.yml --s3-bucket chapter6-lambda-function-src --output-template-file sample-sam-output.yml --no-fail-on-empty-changeset. Reason: exit status 255
