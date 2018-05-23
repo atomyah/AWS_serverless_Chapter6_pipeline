@@ -3,7 +3,7 @@ phases:
   install:
     commands:
       - pip install boto3
-      - aws cloudformation package --template-file sample-sam.yml --s3-bucket chapter6-bucket --output-template-file sample-sam-output.yml
+      - aws cloudformation package --template-file sample-sam.yml --s3-bucket chapter6-lambda-function-src --output-template-file sample-sam-output.yml
 artifacts:
   type: zip
   files:

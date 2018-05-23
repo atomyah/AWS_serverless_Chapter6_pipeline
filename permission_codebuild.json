@@ -3,13 +3,10 @@
     "Statement": [{
             "Effect": "Allow",
             "Action": [
-                "s3:PutObject",
-                "s3:GetObject",
-                "s3:GetObjectVersion",
-                "s3:ListBucket"
+                "s3:*"
             ],
             "Resource": [
-                "arn:aws:s3:::chapter6-bucket/*"
+                "arn:aws:s3:::chapter6-lambda-function-src/*"
             ]
         },
         {
@@ -38,17 +35,16 @@
                 "lambda:TagResource",
                 "lambda:ListTags",
                 "lambda:UntagResource",
-                "s3:ListObjects"
+                "s3:*"
             ],
             "Resource": "*"
         },
         {
             "Effect": "Allow",
             "Action": [
-                "s3:PutObject",
-                "s3:GetObject"
+                "s3:*"
             ],
-            "Resource": "arn:aws:s3:::chapter6-bucket/*"
+            "Resource": "arn:aws:s3:::chapter6-lambda-function-src/*"
         }
     ]
 }
